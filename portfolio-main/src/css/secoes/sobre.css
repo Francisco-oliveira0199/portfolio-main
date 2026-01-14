@@ -1,0 +1,108 @@
+/* SOBRE MIM */
+.sobre-mim .imagem-sobre-mim {    
+  max-width: 40%;
+  padding: 0 15px;
+}
+
+.sobre-mim .imagem-sobre-mim .img-box {
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--cor-cinza-medio), var(--cor-cinza-escuro));
+  position: relative;
+}
+
+.sobre-mim .imagem-sobre-mim img {
+  border: 5px solid transparent;
+  border-radius: 10px;
+  background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria)) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.player-stats {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 1px solid var(--cor-primaria);
+}
+
+.player-stats h4 {
+  font-family: var(--fonte-terminal);
+  font-size: 1.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat {
+  margin-bottom: 15px;
+}
+
+.stat span {
+  display: block;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  margin-bottom: 5px;
+}
+
+.sobre-mim .informacoes-sobre-mim {    
+  max-width: 60%;
+  padding: 0 25px;   
+  align-self: center; 
+}
+
+.sobre-mim .informacoes-sobre-mim .botoes {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.sobre-mim .informacoes-sobre-mim .console-window {
+  margin-bottom: 30px;
+}
+
+.sobre-mim .informacoes-sobre-mim .botoes .comando-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.4rem;
+}
+
+@media(max-width: 1280px) { 
+  .sobre-mim .row {
+    justify-content: center;
+  }
+
+  .sobre-mim .imagem-sobre-mim {        
+    max-width: 100%;
+    padding: 0 var(--mobile-padding);
+    margin-bottom: 50px;
+  }
+
+  .sobre-mim .informacoes-sobre-mim {  
+    padding: 0 var(--mobile-padding);
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .sobre-mim .imagem-sobre-mim .inner-shadow {
+    box-shadow: none;
+  }
+  
+  .player-stats {
+    max-width: 400px;
+    margin: 30px auto 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .sobre-mim .informacoes-sobre-mim {  
+    max-width: 100%;                   
+  }
+}

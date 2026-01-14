@@ -1,0 +1,169 @@
+/* HABILIDADES - SKILL TREE */
+.habilidades .skill-tree {    
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.habilidades .skill-tree::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  border: 2px dashed rgba(0, 255, 157, 0.2);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.skill-node {
+  background: linear-gradient(135deg, var(--cor-cinza-medio), var(--cor-cinza-escuro));
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.skill-node:hover {
+  transform: translateY(-10px);
+  border-color: var(--cor-primaria);
+  box-shadow: 
+    0 10px 30px rgba(0, 255, 157, 0.2),
+    0 0 40px rgba(0, 255, 157, 0.1);
+}
+
+.skill-node.locked {
+  opacity: 0.6;
+  filter: grayscale(0.8);
+}
+
+.skill-node.locked:hover {
+  transform: none;
+  border-color: var(--cor-texto-secundario);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.skill-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon i {
+  font-size: 4.5rem;
+  color: var(--cor-primaria);
+  transition: all 0.3s ease;
+}
+
+.skill-node:hover .skill-icon i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px var(--cor-primaria));
+}
+
+.skill-level {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-preta);
+  font-family: var(--fonte-terminal);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 2px solid var(--cor-preta);
+}
+
+.skill-info {
+  flex: 1;
+}
+
+.skill-info h3 {
+  font-size: var(--fonte-grande);
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--cor-primaria);
+  text-align: center;
+  font-family: var(--fonte-primaria);
+}
+
+.skill-xp {
+  margin-bottom: 15px;
+}
+
+.skill-xp span {
+  display: block;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  color: var(--cor-texto-secundario);
+  text-align: right;
+  margin-top: 5px;
+}
+
+.skill-info p {
+  font-size: 1.4rem;
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.skill-tag {
+  background-color: rgba(0, 255, 157, 0.1);
+  color: var(--cor-primaria);
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 255, 157, 0.3);
+}
+
+.skill-requirements {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: rgba(255, 0, 64, 0.1);
+  border: 1px solid rgba(255, 0, 64, 0.3);
+  border-radius: 10px;
+}
+
+.skill-requirements span {
+  font-family: var(--fonte-terminal);
+  font-size: 1rem;
+  color: var(--cor-perigo);
+  text-align: center;
+  display: block;
+}
+
+@media(max-width: 768px) {
+  .habilidades .skill-tree {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  
+  .skill-node {
+    max-width: 100%;
+  }
+}

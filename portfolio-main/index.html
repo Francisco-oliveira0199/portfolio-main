@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francisco Oliveira - Dev Gamer Frontend</title>
+
+  <link rel="stylesheet" href="src/css/font-awesome.css" />
+  <link rel="stylesheet" href="src/css/reset.css" />
+  
+  <!-- Global -->
+  <link rel="stylesheet" href="src/css/globais.css" />
+  <link rel="stylesheet" href="src/css/variaveis.css" />
+  <link rel="stylesheet" href="src/css/secoes/header.css" />
+  <link rel="stylesheet" href="src/css/secoes/home.css" />
+  <link rel="stylesheet" href="src/css/secoes/sobre.css" />
+  <link rel="stylesheet" href="src/css/secoes/habilidades.css" />
+  <link rel="stylesheet" href="src/css/secoes/projetos.css" />
+  <link rel="stylesheet" href="src/css/secoes/footer.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+  
+  <!-- Fontes Gamer -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Áudio (opcional) -->
+  <audio id="clickSound" preload="auto">
+    <source src="./src/sons/switch-sound.mp3" type="audio/mpeg">
+  </audio>
+</head>
+
+<body>
+  <!-- Tela de Carregamento -->
+  <div class="tela-carregamento" id="telaCarregamento">
+    <div class="loading-container">
+      <div class="loading-text">INICIALIZANDO SISTEMA...</div>
+      <div class="loading-bar">
+        <div class="loading-progress" id="loadingProgress"></div>
+      </div>
+      <div class="loading-stats">
+        <span>CARREGANDO ARQUIVOS: <span id="assetCount">0%</span></span>
+        <span>MEMÓRIA: <span id="memoryLoad">OK</span></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="row justify-content-between alinhar-itens-no-centro">
+        <a href="#">
+          <h1 class="logo">FO</h1>
+        </a>
+        <nav>
+          <input id="menu-hamburguer" type="checkbox" />
+          <label for="menu-hamburguer">
+            <div class="menu">
+              <span class="hamburguer"></span>
+            </div>
+          </label>
+          <ul>
+            <li><a href="#sobre-mim" class="nav-link" data-text="[SOBRE]">[SOBRE]</a></li>
+            <li><a href="#habilidades" class="nav-link" data-text="[HABILIDADES]">[HABILIDADES]</a></li>
+            <li><a href="#projetos" class="nav-link" data-text="[MISSÕES]">[MISSÕES]</a></li>
+            <li><a href="#contato" class="nav-link" data-text="[CONTATO]">[CONTATO]</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="home">
+    <div class="container">
+      <div class="row full-screen alinhar-itens-no-centro">
+        <div class="texto-home">
+          <p class="console-text">$ whoami</p>
+          <h1 class="glitch" data-text="Francisco Oliveira">Francisco Oliveira</h1>
+          <h2 class="typing-text">> DESENVOLVEDOR FRONTEND_</h2>
+          <div class="console-output">
+            <p>> STATUS: <span class="status-online">ONLINE</span></p>
+            <p>> MISSÕES ATIVAS: <span class="mission-count">3</span></p>
+            <p>> NÍVEL: <span class="level">11</span></p>
+          </div>
+
+          <div class="redes-sociais">
+            <a href="#" class="outer-shadow" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="outer-shadow" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="outer-shadow" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="outer-shadow" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="outer-shadow" title="Discord"><i class="fab fa-discord"></i></a>
+          </div>
+          
+          <div class="comandos-home">
+            <a href="#projetos" class="botao comando-btn">
+              <i class="fas fa-gamepad"></i> VER MISSÕES
+            </a>
+            <a href="src/arquivos/cv.pdf" target="_blank" class="botao comando-btn">
+              <i class="fas fa-download"></i> BAIXAR CV
+            </a>
+          </div>
+        </div>
+
+        <div class="img-home">
+          <div class="img-box inner-shadow pixel-border">
+            <img class="outer-shadow" src="src/imagens/foto-perfil.png" alt="Avatar Francisco Oliveira" />
+            <div class="player-tag">
+              <span class="player-name">Player: FO_Dev</span>
+              <div class="health-bar">
+                <div class="health-fill" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="sobre-mim section" id="sobre-mim">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2 class="section-title-gamer">> SOBRE O JOGADOR</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="imagem-sobre-mim">
+          <div class="img-box inner-shadow pixel-border">
+            <img src="src/imagens/foto-perfil.png" alt="Avatar do Jogador" class="outer-shadow" />
+            <div class="player-stats">
+              <h4>STATUS DO PERSONAGEM</h4>
+              <div class="stat">
+                <span>CODING:</span>
+                <div class="stat-bar"><div class="stat-fill" style="width: 88%"></div></div>
+              </div>
+              <div class="stat">
+                <span>DESIGN:</span>
+                <div class="stat-bar"><div class="stat-fill" style="width: 75%"></div></div>
+              </div>
+              <div class="stat">
+                <span>DEBUGGING:</span>
+                <div class="stat-bar"><div class="stat-fill" style="width: 92%"></div></div>
+              </div>
+              <div class="stat">
+                <span>CAFÉ:</span>
+                <div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="informacoes-sobre-mim">
+          <div class="console-window">
+            <div class="console-header">
+              <span class="console-title">terminal@fo-dev:~$ bio.txt</span>
+              <div class="console-controls">
+                <span class="console-btn close"></span>
+                <span class="console-btn minimize"></span>
+                <span class="console-btn maximize"></span>
+              </div>
+            </div>
+            <div class="console-body">
+              <p><span class="console-prompt">$</span> <span class="console-command">Biografia</span></p>
+              <p>> NOME: <span class="console-highlight">Francisco Oliveira</span></p>
+              <p>> CLASSE: <span class="console-highlight">Desenvolvedor Frontend</span></p>
+              <p>> ESPECIALIDADE: <span class="console-highlight">Criar interfaces interativas e responsivas</span></p>
+              <p>> HP: <span class="console-highlight">❤️❤️❤️❤️❤️ (Alta resistência a café)</span></p>
+              <br>
+              <p><span class="console-prompt">$</span> <span class="console-command">Sobre mim</span></p>
+              <p>> Sempre em busca de novos desafios (BOSS FIGHTS) para upar minhas habilidades.</p>
+              <p>> Atualmente focado em missões de desenvolvimento web com HTML5, CSS3, JavaScript.</p>
+              <p>> Quando não estou codando, estou jogando, assistindo animes ou explorando novas tecnologias.</p>
+              <p>> Acredito que a melhor forma de aprender é fazendo, então estou sempre com algum projeto em andamento.</p>
+              <br>
+              <p><span class="console-prompt">$</span> <span class="console-command">Skills</span></p>
+              <p>> HABILIDADES DESBLOQUEADAS: 6/8</p>
+              <p>> PRÓXIMO LEVEL: 5000 XP</p>
+            </div>
+          </div>
+
+          <div class="botoes">
+            <a target="_blank" href="/src/arquivos/cv.pdf" class="botao outer-shadow comando-btn">
+              <i class="fas fa-file-download"></i> BAIXAR CURRÍCULO
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="habilidades section" id="habilidades">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2 class="section-title-gamer">> SKILL TREE</h2>
+        </div>
+      </div>
+
+      <div class="container-habilidades skill-tree">
+        <div class="skill-node" data-level="3">
+          <div class="skill-icon">
+            <i class="devicon devicon-javascript-plain"></i>
+            <div class="skill-level">LVL 3</div>
+          </div>
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <div class="skill-xp">
+              <div class="xp-bar"><div class="xp-fill" style="width: 60%"></div></div>
+              <span>600/1000 XP</span>
+            </div>
+            <p>Domínio de ES6+, manipulação de DOM, async/await, APIs REST.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">ES6+</span>
+              <span class="skill-tag">DOM</span>
+              <span class="skill-tag">Async</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-node" data-level="4">
+          <div class="skill-icon">
+            <i class="devicon devicon-html5-plain-wordmark"></i>
+            <div class="skill-level">LVL 4</div>
+          </div>
+          <div class="skill-info">
+            <h3>HTML5</h3>
+            <div class="skill-xp">
+              <div class="xp-bar"><div class="xp-fill" style="width: 80%"></div></div>
+              <span>800/1000 XP</span>
+            </div>
+            <p>Estrutura semântica, acessibilidade, SEO, formulários avançados.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Semântica</span>
+              <span class="skill-tag">A11y</span>
+              <span class="skill-tag">SEO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-node" data-level="4">
+          <div class="skill-icon">
+            <i class="devicon devicon-css3-plain-wordmark"></i>
+            <div class="skill-level">LVL 4</div>
+          </div>
+          <div class="skill-info">
+            <h3>CSS3</h3>
+            <div class="skill-xp">
+              <div class="xp-bar"><div class="xp-fill" style="width: 75%"></div></div>
+              <span>750/1000 XP</span>
+            </div>
+            <p>Flexbox, Grid, animações, responsividade, variáveis CSS.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Flexbox</span>
+              <span class="skill-tag">Grid</span>
+              <span class="skill-tag">Responsivo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-node" data-level="3">
+          <div class="skill-icon">
+            <i class="devicon devicon-github-original"></i>
+            <div class="skill-level">LVL 3</div>
+          </div>
+          <div class="skill-info">
+            <h3>GitHub</h3>
+            <div class="skill-xp">
+              <div class="xp-bar"><div class="xp-fill" style="width: 70%"></div></div>
+              <span>700/1000 XP</span>
+            </div>
+            <p>Versionamento, pull requests, GitHub Pages, ações automatizadas.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Versionamento</span>
+              <span class="skill-tag">PRs</span>
+              <span class="skill-tag">Pages</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-node" data-level="3">
+          <div class="skill-icon">
+            <i class="devicon devicon-git-plain"></i>
+            <div class="skill-level">LVL 3</div>
+          </div>
+          <div class="skill-info">
+            <h3>Git</h3>
+            <div class="skill-xp">
+              <div class="xp-bar"><div class="xp-fill" style="width: 65%"></div></div>
+              <span>650/1000 XP</span>
+            </div>
+            <p>Controle de versão, branching, merging, resolução de conflitos.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Branching</span>
+              <span class="skill-tag">Merge</span>
+              <span class="skill-tag">Comandos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-node" data-level="2">
+          <div class="skill-icon">
+            <i class="devicon devicon-figma-plain"></i>
+            <div class="skill-level">LVL 2</div>
+          </div>
+          <div class="skill-info">
+            <h3>Figma</h3>
+            <div class="skill-xp">
+              <div class="xp-bar"><div class="xp-fill" style="width: 40%"></div></div>
+              <span>400/1000 XP</span>
+            </div>
+            <p>Design de interfaces, prototipagem, sistemas de design, colaboração em tempo real.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">UI Design</span>
+              <span class="skill-tag">Prototipagem</span>
+              <span class="skill-tag">Wireframes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-node locked" data-level="1">
+          <div class="skill-icon">
+            <i class="devicon devicon-react-original"></i>
+            <div class="skill-level">LVL 1</div>
+          </div>
+          <div class="skill-info">
+            <h3>React</h3>
+            <div class="skill-xp">
+              <div class="xp-bar"><div class="xp-fill" style="width: 20%"></div></div>
+              <span>200/1000 XP</span>
+            </div>
+            <p>Componentização, Hooks, State Management, JSX. Em fase de aprendizado.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Components</span>
+              <span class="skill-tag">Hooks</span>
+              <span class="skill-tag">JSX</span>
+            </div>
+            <div class="skill-requirements">
+              <span>Requisito: Completar estudos avançados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-node locked mystery" data-level="0">
+          <div class="skill-icon">
+            <i class="fas fa-question"></i>
+            <div class="skill-level">???</div>
+          </div>
+          <div class="skill-info">
+            <h3 class="mystery-title">??????</h3>
+            <p class="mystery-text">Habilidade secreta bloqueada. Complete mais missões para revelar!</p>
+            <div class="skill-requirements">
+              <span>Requisitos: Level 20 + 7 missões concluídas</span>
+              <div class="progress-container">
+                <div class="progress-label">Missões: 3/7</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="mystery-hint">
+                <i class="fas fa-eye-slash"></i> Dica: Está relacionada a jogos...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projetos section" id="projetos">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2 class="section-title-gamer">> MISSÕES CONCLUÍDAS</h2>
+        </div>
+      </div>
+
+      <div class="container-projetos">
+        <div class="projeto missao">        
+          <a href="https://formulario-partidas-lol.vercel.app/" target="_blank">
+            <div class="missao-header">
+              <span class="missao-dificuldade medio">MÉDIA</span>
+              <span class="missao-status concluida">CONCLUÍDA</span>
+            </div>
+            <img src="./src/imagens/formulario-lol.png" alt="Formulário de análise de partidas - Wild Rift" />
+            <h3>MISSÃO: Analisador de Partidas</h3>
+            <div class="informacoes-projeto">          
+              <p class="missao-descricao">Sistema para análise estatística de partidas de League of Legends: Wild Rift</p>
+              <div class="missao-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JS</span>
+              </div>
+              <div class="missao-recompensas">
+                <span><i class="fas fa-star"></i> +150 XP</span>
+                <span><i class="fas fa-trophy"></i> Achievement</span>
+              </div>
+              <p class="missao-acessar">🔗 ACESSAR MISSÃO</p>
+            </div>     
+          </a>
+        </div>
+
+        <div class="projeto missao">        
+          <a href="https://projeto-listagem-pokemon-rouge.vercel.app/" target="_blank">
+            <div class="missao-header">
+              <span class="missao-dificuldade facil">FÁCIL</span>
+              <span class="missao-status concluida">CONCLUÍDA</span>
+            </div>
+            <img src="./src/imagens/pokemon-listagem.png" alt="Projeto Pokémon Listagem" />
+            <h3>MISSÃO: Pokédex Digital</h3>
+            <div class="informacoes-projeto">          
+              <p class="missao-descricao">Listagem interativa de Pokémon com filtros e detalhes</p>
+              <div class="missao-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">API</span>
+              </div>
+              <div class="missao-recompensas">
+                <span><i class="fas fa-star"></i> +100 XP</span>
+                <span><i class="fas fa-trophy"></i> Achievement</span>
+              </div>
+              <p class="missao-acessar">🔗 ACESSAR MISSÃO</p>
+            </div>      
+          </a>          
+        </div>
+
+        <div class="projeto missao">        
+          <a href="https://wc-site-eosin.vercel.app/" target="_blank">
+            <div class="missao-header">
+              <span class="missao-dificuldade medio">MÉDIA</span>
+              <span class="missao-status concluida">CONCLUÍDA</span>
+            </div>
+            <img src="./src/imagens/wildclash.png" alt="Projeto Wild Clash" />
+            <h3>MISSÃO: Site Wild Clash</h3>
+            <div class="informacoes-projeto">
+              <p class="missao-descricao">Site oficial de competições do Wild Clashp com design responsivo e interativo</p>
+              <div class="missao-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">Responsivo</span>
+              </div>
+              <div class="missao-recompensas">
+                <span><i class="fas fa-star"></i> +200 XP</span>
+                <span><i class="fas fa-trophy"></i> Achievement</span>
+              </div>
+              <p class="missao-acessar">🔗 ACESSAR MISSÃO</p>
+            </div>
+          </a>   
+        </div>
+
+        <div class="projeto missao planejada">
+          <a href="#">
+            <div class="missao-header">
+              <span class="missao-dificuldade dificil">DIFÍCIL</span>
+              <span class="missao-status planejada">PLANEJADA</span>
+            </div>
+            <div class="missao-placeholder">
+              <i class="fas fa-code"></i>
+              <h4>PROJETO AVANÇADO</h4>
+              <p>Em breve...</p>
+            </div>
+            <h3>MISSÃO: [EM DESENVOLVIMENTO]</h3>
+            <div class="informacoes-projeto">
+              <p class="missao-descricao">Projeto avançado em React com API integrada e funcionalidades complexas</p>
+              <div class="missao-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">API</span>
+              </div>
+              <div class="missao-recompensas">
+                <span><i class="fas fa-star"></i> +300 XP</span>
+                <span><i class="fas fa-trophy"></i> Rare Achievement</span>
+              </div>
+              <p class="missao-acessar">⏳ EM BREVE</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contato">
+    <div class="container">
+      <h2 class="footer-title">> TRANSMISSÃO DE DADOS</h2>
+      <p class="footer-subtitle">Conecte-se para novas missões colaborativas</p>
+      
+      <div class="console-window contato-console">
+        <div class="console-header">
+          <span class="console-title">Contatos</span>
+          <div class="console-controls">
+            <span class="console-btn close"></span>
+            <span class="console-btn minimize"></span>
+            <span class="console-btn maximize"></span>
+          </div>
+        </div>
+        <div class="console-body">
+          <p><span class="console-prompt">$</span> <span class="console-command">Enviar mensagem</span></p>
+          <p>> Digite sua mensagem abaixo:</p>
+          <div class="contato-form">
+            <div class="form-group">
+              <label for="nome">> NOME:</label>
+              <input type="text" id="nome" class="console-input" placeholder="Digite seu nome...">
+            </div>
+            <div class="form-group">
+              <label for="email">> EMAIL:</label>
+              <input type="email" id="email" class="console-input" placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="mensagem">> MENSAGEM:</label>
+              <textarea id="mensagem" class="console-input console-textarea" placeholder="Descreva sua missão..."></textarea>
+            </div>
+            <button class="botao comando-btn enviar-btn" id="enviarBtn">$ Enviar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="redes-sociais">
+        <a href="#" class="outer-shadow server-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="outer-shadow server-link" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="outer-shadow server-link" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="outer-shadow server-link" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+         <a href="#" class="outer-shadow server-link" title="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>

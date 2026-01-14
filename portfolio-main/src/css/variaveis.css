@@ -1,0 +1,70 @@
+:root {
+  /* Cores Gamer */
+  --cor-primaria: #00ff9d;
+  --cor-secundaria: #7700ff;
+  --cor-terciaria: #ff0055;
+  --cor-branca: #ffffff;
+  --cor-preta: #0a0a0a;
+  --cor-cinza-escuro: #1a1a1a;
+  --cor-cinza-medio: #2a2a2a;
+  --cor-cinza-claro: #3a3a3a;
+  
+  /* Cores de destaque */
+  --cor-destaque: #00eeff;
+  --cor-perigo: #ff0040;
+  --cor-aviso: #ffaa00;
+  --cor-sucesso: #00ff9d;
+  
+  /* Cores de interface */
+  --cor-fundo-escuro: #0a0a0a;
+  --cor-fundo-cinza-escuro: #1a1a1a;
+  --cor-fundo-cinza-claro: #2a2a2a;
+  --cor-texto: #e0e0e0;
+  --cor-texto-secundario: #888888;
+}
+
+:root {
+  /* Fontes Gamer */
+  --fonte-primaria: 'Orbitron', sans-serif;
+  --fonte-secundaria: 'Share Tech Mono', monospace;
+  --fonte-terminal: 'Press Start 2P', cursive;
+  --fonte-gigante: 4.5rem;
+  --fonte-extra-grande: 3rem;
+  --fonte-grande: 2.4rem;
+  --fonte-normal: 1.6rem;
+  --fonte-pequena: 1.2rem;
+}
+
+:root {
+  --mobile-padding: 30px;
+}
+
+/* Modo Profissional */
+body.modo-profissional {
+  --cor-primaria: #11b8c4;
+  --cor-secundaria: #3412ca;
+  --cor-fundo-cinza-escuro: #282828;
+  --cor-fundo-cinza-claro: #353535;
+  --fonte-primaria: 'Poppins', sans-serif;
+  --fonte-secundaria: 'Raleway', sans-serif;
+}
+
+body.modo-profissional .section-title-gamer,
+body.modo-profissional .console-text,
+body.modo-profissional .comando-btn {
+  font-family: var(--fonte-secundaria);
+}
+
+/* Modo Secreto (Easter Egg) */
+body.secret-mode {
+  --cor-primaria: #ff00ff;
+  --cor-secundaria: #ffff00;
+  animation: secretColors 3s infinite;
+}
+
+@keyframes secretColors {
+  0% { --cor-primaria: #ff00ff; --cor-secundaria: #ffff00; }
+  33% { --cor-primaria: #00ffff; --cor-secundaria: #ff00ff; }
+  66% { --cor-primaria: #ffff00; --cor-secundaria: #00ffff; }
+  100% { --cor-primaria: #ff00ff; --cor-secundaria: #ffff00; }
+}
