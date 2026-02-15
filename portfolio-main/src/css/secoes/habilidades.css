@@ -1,4 +1,3 @@
-/* HABILIDADES - SKILL TREE */
 .habilidades .skill-tree {    
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -101,8 +100,24 @@
   font-family: var(--fonte-primaria);
 }
 
+/* Estilo para a barra de XP */
 .skill-xp {
   margin-bottom: 15px;
+}
+
+.xp-bar {
+  height: 8px;
+  background-color: var(--cor-cinza-medio);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffaa00, #ffff00) !important; /* Forçar gradiente */
+  border-radius: 4px;
+  transition: width 0.5s ease;
 }
 
 .skill-xp span {
@@ -155,6 +170,44 @@
   color: var(--cor-perigo);
   text-align: center;
   display: block;
+}
+
+/* Ajustes para a seção de progresso da habilidade misteriosa */
+.progress-container {
+  margin-top: 10px;
+}
+
+.progress-label {
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--cor-cinza-medio);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-destaque));
+  border-radius: 4px;
+}
+
+.mystery-hint {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--cor-texto-secundario);
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+}
+
+.mystery-hint i {
+  margin-right: 5px;
+  color: var(--cor-primaria);
 }
 
 @media(max-width: 768px) {

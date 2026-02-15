@@ -1,108 +1,88 @@
-/* SOBRE MIM */
-.sobre-mim .imagem-sobre-mim {    
-  max-width: 40%;
-  padding: 0 15px;
+.sobre-mim .sobre-container {
+  display: flex;
+  align-items: stretch; /* garante que os filhos tenham a mesma altura */
+  gap: 30px;
 }
 
-.sobre-mim .imagem-sobre-mim .img-box {
+.sobre-mim .imagem-sobre-mim {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sobre-mim .img-box {
+  background-color: var(--cor-cinza-escuro);
   padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  background: linear-gradient(135deg, var(--cor-cinza-medio), var(--cor-cinza-escuro));
-  position: relative;
+  border-radius: 30px;
+  height: 100%; /* ocupar toda a altura disponível */
+  display: flex;
+  flex-direction: column;
 }
 
-.sobre-mim .imagem-sobre-mim img {
-  border: 5px solid transparent;
-  border-radius: 10px;
-  background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria)) border-box;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+.sobre-mim .img-box img {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 20px;
 }
+
+/* Se a imagem não aparecer, verifique se o arquivo existe no caminho: src/imagens/foto-perfil.png */
+/* Caso não exista, substitua por um placeholder ou ajuste o caminho */
 
 .player-stats {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--cor-cinza-medio);
+  padding: 15px;
   border-radius: 10px;
   border: 1px solid var(--cor-primaria);
+  margin-top: auto; /* empurra para o final se necessário */
 }
 
 .player-stats h4 {
-  font-family: var(--fonte-terminal);
-  font-size: 1.6rem;
   color: var(--cor-primaria);
-  margin-bottom: 15px;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-size: var(--fonte-normal);
+  font-family: var(--fonte-terminal);
 }
 
 .stat {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .stat span {
   display: block;
-  font-family: var(--fonte-secundaria);
-  font-size: 1.2rem;
-  color: var(--cor-texto);
   margin-bottom: 5px;
+  font-size: var(--fonte-pequena);
+  color: var(--cor-texto-secundario);
 }
 
-.sobre-mim .informacoes-sobre-mim {    
-  max-width: 60%;
-  padding: 0 25px;   
-  align-self: center; 
+.stat-bar {
+  height: 10px;
+  background-color: var(--cor-cinza-claro);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.sobre-mim .informacoes-sobre-mim .botoes {
-  margin-top: 50px;
-  text-align: center;
+.stat-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-destaque));
+  border-radius: 5px;
 }
 
-.sobre-mim .informacoes-sobre-mim .console-window {
-  margin-bottom: 30px;
+.sobre-mim .informacoes-sobre-mim {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-.sobre-mim .informacoes-sobre-mim .botoes .comando-btn {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 1.4rem;
+.sobre-mim .console-window {
+  height: 100%; /* faz o console ocupar toda a altura do contêiner */
+  display: flex;
+  flex-direction: column;
 }
 
-@media(max-width: 1280px) { 
-  .sobre-mim .row {
-    justify-content: center;
-  }
-
-  .sobre-mim .imagem-sobre-mim {        
-    max-width: 100%;
-    padding: 0 var(--mobile-padding);
-    margin-bottom: 50px;
-  }
-
-  .sobre-mim .informacoes-sobre-mim {  
-    padding: 0 var(--mobile-padding);
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .sobre-mim .imagem-sobre-mim .inner-shadow {
-    box-shadow: none;
-  }
-  
-  .player-stats {
-    max-width: 400px;
-    margin: 30px auto 0;
-  }
-}
-
-@media(max-width: 768px) {
-  .sobre-mim .informacoes-sobre-mim {  
-    max-width: 100%;                   
-  }
+.sobre-mim .console-body {
+  flex: 1; /* expande para preencher o espaço restante */
+  overflow-y: auto; /* adiciona scroll se necessário */
 }
