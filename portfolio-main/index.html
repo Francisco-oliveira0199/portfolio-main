@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="src/css/font-awesome.css" />
   <link rel="stylesheet" href="src/css/reset.css" />
   
-  <!-- Global -->
   <link rel="stylesheet" href="src/css/globais.css" />
   <link rel="stylesheet" href="src/css/variaveis.css" />
   <link rel="stylesheet" href="src/css/secoes/header.css" />
@@ -22,17 +21,15 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
   
-  <!-- Fontes Gamer -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   
-  <!-- Áudio (opcional) -->
   <audio id="clickSound" preload="auto">
     <source src="./src/sons/switch-sound.mp3" type="audio/mpeg">
   </audio>
 </head>
 
 <body>
-  <!-- Tela de Carregamento -->
+
   <div class="tela-carregamento" id="telaCarregamento">
     <div class="loading-container">
       <div class="loading-text">INICIALIZANDO SISTEMA...</div>
@@ -54,10 +51,9 @@
         </a>
         <nav>
           <input id="menu-hamburguer" type="checkbox" />
-          <label for="menu-hamburguer">
-            <div class="menu">
-              <span class="hamburguer"></span>
-            </div>
+          <label for="menu-hamburguer" class="menu">
+           <span class="hamburguer"></span>
+          </label>
           </label>
           <ul>
             <li><a href="#sobre-mim" class="nav-link" data-text="[SOBRE]">[SOBRE]</a></li>
@@ -177,7 +173,7 @@
       </div>
 
       <div class="container-habilidades skill-tree">
-        <!-- Conteúdo das habilidades - mantido igual ao original -->
+      
         <div class="skill-node" data-level="3">
           <div class="skill-icon">
             <i class="devicon devicon-javascript-plain"></i>
@@ -356,7 +352,7 @@
       </div>
 
       <div class="container-projetos">
-        <!-- Conteúdo dos projetos - mantido igual ao original -->
+
         <div class="projeto missao">        
           <a href="https://formulario-partidas-lol.vercel.app/" target="_blank">
             <div class="missao-header">
@@ -379,32 +375,7 @@
               <p class="missao-acessar">🔗 ACESSAR MISSÃO</p>
             </div>     
           </a>
-        </div>
-
-        <div class="projeto missao">        
-          <a href="https://projeto-listagem-pokemon-rouge.vercel.app/" target="_blank">
-            <div class="missao-header">
-              <span class="missao-dificuldade facil">FÁCIL</span>
-              <span class="missao-status concluida">CONCLUÍDA</span>
-            </div>
-            <img src="./src/imagens/pokemon-listagem.png" alt="Projeto Pokémon Listagem" />
-            <h3>MISSÃO: Pokédex Digital</h3>
-            <div class="informacoes-projeto">          
-              <p class="missao-descricao">Listagem interativa de Pokémon com filtros e detalhes</p>
-              <div class="missao-tech">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">JS</span>
-                <span class="tech-tag">API</span>
-              </div>
-              <div class="missao-recompensas">
-                <span><i class="fas fa-star"></i> +100 XP</span>
-                <span><i class="fas fa-trophy"></i> Achievement</span>
-              </div>
-              <p class="missao-acessar">🔗 ACESSAR MISSÃO</p>
-            </div>      
-          </a>          
-        </div>
+        </div> 
 
         <div class="projeto missao">        
           <a href="https://wc-site-eosin.vercel.app/" target="_blank">
@@ -457,6 +428,66 @@
               <p class="missao-acessar">EM BREVE</p>
             </div>
           </a>
+        </div>
+
+   <div class="projeto missao">
+   <a href="https://restauranete-modelo.vercel.app/" target="_blank">
+
+    <div class="missao-header">
+      <span class="missao-dificuldade dificil">DIFÍCIL</span>
+      <span class="missao-status planejada">EM DESENVOLVIMENTO</span>
+    </div>
+
+    <img src="./src/imagens/restaurante-modelo.png"
+    alt="Sistema Delivery">
+
+    <h3>MISSÃO: Delivery Online</h3>
+    <div class="informacoes-projeto">
+      <p class="missao-descricao">
+        Plataforma completa de delivery com catálogo de produtos,
+        carrinho de compras, autenticação de usuários e pedidos.
+      </p>
+
+      <div class="missao-tech">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">JS</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">PostgreSQL</span>
+      </div>
+
+      <div class="missao-recompensas">
+        <span><i class="fas fa-star"></i> +500 XP</span>
+        <span><i class="fas fa-trophy"></i> Epic Achievement</span>
+      </div>
+      <p class="missao-acessar">🔗 ACESSAR MISSÃO</p>
+    </div>
+  </a>
+</div>
+
+        <div class="projeto missao">        
+          <a href="https://projeto-listagem-pokemon-rouge.vercel.app/" target="_blank">
+            <div class="missao-header">
+              <span class="missao-dificuldade facil">FÁCIL</span>
+              <span class="missao-status concluida">CONCLUÍDA</span>
+            </div>
+            <img src="./src/imagens/pokemon-listagem.png" alt="Projeto Pokémon Listagem"/>
+            <h3>MISSÃO: Pokédex Digital</h3>
+            <div class="informacoes-projeto">          
+              <p class="missao-descricao">Listagem interativa de Pokémon com filtros e detalhes</p>
+              <div class="missao-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">API</span>
+              </div>
+              <div class="missao-recompensas">
+                <span><i class="fas fa-star"></i> +100 XP</span>
+                <span><i class="fas fa-trophy"></i> Achievement</span>
+              </div>
+              <p class="missao-acessar">🔗 ACESSAR MISSÃO</p>
+            </div>      
+          </a>          
         </div>
       </div>
     </div>
@@ -514,7 +545,9 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="src/js/main.js"></script>
+
 </body>
 
 </html>

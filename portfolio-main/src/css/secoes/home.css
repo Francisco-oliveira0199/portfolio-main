@@ -1,5 +1,5 @@
 .home .full-screen {
-  padding: 120px 0 50px; /* Aumentado para 120px para espaçar do header */
+  padding: 120px 0 50px; 
   min-height: 86vh;
   position: relative;
   overflow: hidden;

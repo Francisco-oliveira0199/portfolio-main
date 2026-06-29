@@ -526,7 +526,7 @@ body::before {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Notificações */
+
 .notification {
   position: fixed;
   top: 20px;

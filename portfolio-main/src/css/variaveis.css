@@ -1,5 +1,5 @@
 :root {
-  /* Cores Gamer - ajustadas para menos saturadas */
+
   --cor-primaria: #0eff9d;
   --cor-secundaria: #7a4dff;
   --cor-terciaria: #ff3b6d;
@@ -9,13 +9,11 @@
   --cor-cinza-medio: #2a2a2a;
   --cor-cinza-claro: #3a3a3a;
   
-  /* Cores de destaque ajustadas */
   --cor-destaque: #3aefff;
   --cor-perigo: #ff2b5a;
   --cor-aviso: #ffc145;
   --cor-sucesso: #0eff9d;
   
-  /* Cores de interface */
   --cor-fundo-escuro: #0a0a0a;
   --cor-fundo-cinza-escuro: #1a1a1a;
   --cor-fundo-cinza-claro: #2a2a2a;
@@ -24,7 +22,6 @@
 }
 
 :root {
-  /* Fontes Gamer */
   --fonte-primaria: 'Orbitron', sans-serif;
   --fonte-secundaria: 'Share Tech Mono', monospace;
   --fonte-terminal: 'Press Start 2P', cursive;
@@ -39,7 +36,6 @@
   --mobile-padding: 30px;
 }
 
-/* Modo Profissional */
 body.modo-profissional {
   --cor-primaria: #11b8c4;
   --cor-secundaria: #3412ca;
@@ -55,7 +51,6 @@ body.modo-profissional .comando-btn {
   font-family: var(--fonte-secundaria);
 }
 
-/* Modo Secreto (Easter Egg) */
 body.secret-mode {
   --cor-primaria: #ff3bff;
   --cor-secundaria: #ffff3b;

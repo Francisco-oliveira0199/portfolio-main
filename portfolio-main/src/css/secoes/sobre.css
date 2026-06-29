@@ -1,6 +1,6 @@
 .sobre-mim .sobre-container {
   display: flex;
-  align-items: stretch; /* garante que os filhos tenham a mesma altura */
+  align-items: stretch; 
   gap: 30px;
 }
 
@@ -15,7 +15,7 @@
   background-color: var(--cor-cinza-escuro);
   padding: 20px;
   border-radius: 30px;
-  height: 100%; /* ocupar toda a altura disponível */
+  height: 100%; 
   display: flex;
   flex-direction: column;
 }
@@ -25,9 +25,6 @@
   border-radius: 30px;
   margin-bottom: 20px;
 }
-
-/* Se a imagem não aparecer, verifique se o arquivo existe no caminho: src/imagens/foto-perfil.png */
-/* Caso não exista, substitua por um placeholder ou ajuste o caminho */
 
 .player-stats {
   background-color: var(--cor-cinza-medio);
@@ -77,12 +74,12 @@
 }
 
 .sobre-mim .console-window {
-  height: 100%; /* faz o console ocupar toda a altura do contêiner */
+  height: 100%; 
   display: flex;
   flex-direction: column;
 }
 
 .sobre-mim .console-body {
-  flex: 1; /* expande para preencher o espaço restante */
-  overflow-y: auto; /* adiciona scroll se necessário */
+  flex: 1; 
+  overflow-y: auto; 
 }
